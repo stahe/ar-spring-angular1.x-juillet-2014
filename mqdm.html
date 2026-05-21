@@ -1,0 +1,856 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مثال على نموذج العميل-الخادم - AngularJS 1.x / Spring 4">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ar-spring-angular1.x-juillet-2014/mqdm.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="khdm-spring-4.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>1. مقدمة - مثال على نموذج العميل-الخادم - AngularJS 1.x / Spring 4</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "مثال على نموذج العميل-الخادم - AngularJS 1.x / Spring 4";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="مثال على نموذج العميل-الخادم - AngularJS 1.x / Spring 4" class="md-header__button md-logo" aria-label="مثال على نموذج العميل-الخادم - AngularJS 1.x / Spring 4" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مثال على نموذج العميل-الخادم - AngularJS 1.x / Spring 4
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. مقدمة
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الداكن"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الداكن" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الفاتح"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الفاتح" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/ar-spring-angular1.x-juillet-2014" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="مثال على نموذج العميل-الخادم - AngularJS 1.x / Spring 4" class="md-nav__button md-logo" aria-label="مثال على نموذج العميل-الخادم - AngularJS 1.x / Spring 4" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مثال على نموذج العميل-الخادم - AngularJS 1.x / Spring 4
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/ar-spring-angular1.x-juillet-2014" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مرحبًا بكم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. مقدمة
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="mqdm.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. مقدمة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. بنية التطبيق
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. الأدوات المستخدمة
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3. ميزات التطبيق
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. ميزات التطبيق">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1. إنشاء قاعدة البيانات
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2. خادم الويب / تنفيذ JSON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3. تنفيذ عميل Angular
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="khdm-spring-4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. خادم Spring 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="myl-angular-js.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. عميل Angular JS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tshyl-ltbyq.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. تشغيل التطبيق
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lkhl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. الخلاصة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmlq.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. الملاحق
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheading1882601168461456"></a></p>
+<h1 id="1">1. <span style="color: #365f91">مقدمة</span></h1>
+<p>ملف <bdi dir="ltr" class="odt-ltr-term">PDF</bdi> الخاص بالوثيقة متاح |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQBR2e16OC_1Qq-v7PNllecZASaXlG3R5xuHUoytyytSfsE?e=bPKdjM">هنا</a>|.</p>
+<p>الأمثلة الواردة في المستند متاحة |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQAj6GxmG6PETYZKRGkHmlOrAUHOZ-GVlbDnmJcaNHRoPxA?e=SQNPJM">هنا</a>|.</p>
+<p>هنا، نقترح تقديم إطارين باستخدام مثال العميل/الخادم:</p>
+<ul>
+<li><strong><bdi dir="ltr" class="odt-ltr-term">AngularJS</bdi></strong> المستخدم للعميل. وللتبسيط، سيُشار إليه فيما بعد باسم <strong><bdi dir="ltr" class="odt-ltr-term">Angular</bdi></strong>؛</li>
+<li>يُستخدم <strong><bdi dir="ltr" class="odt-ltr-term">Spring</bdi> 4</strong> للخادم. وللتبسيط، سيُشار إليه فيما بعد باسم <strong><bdi dir="ltr" class="odt-ltr-term">Spring</bdi></strong>؛</li>
+</ul>
+<p>يتطلب فهم هذا المستند بعض المتطلبات الأساسية:</p>
+<ul>
+<li>مستوى متوسط في <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi>؛</li>
+<li>معرفة <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> (<bdi dir="ltr" class="odt-ltr-term">Java Persistence API</bdi>)، الذي سيُستخدم للوصول إلى قاعدة البيانات؛</li>
+<li>معرفة بإصدار واحد على الأقل من <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> لفهم فلسفة هذا الإطار؛</li>
+<li>خبرة في استخدام <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> لتكوين مشاريع <bdi dir="ltr" class="odt-ltr-term">Java</bdi>؛</li>
+<li>فهم أساسي للاتصال عبر <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> في تطبيق الويب؛</li>
+<li>علامات <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> الشائعة؛</li>
+<li>معرفة أساسية بلغة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi>؛</li>
+</ul>
+<p>سيتم تقديم وشرح المعرفة الأخرى الضرورية مع تقدم دراسة الحالة.</p>
+<p><strong>هذا المستند ليس دورة تدريبية وهو غير مكتمل من نواحٍ عديدة</strong>. لمعرفة المزيد عن هذين الإطارين، يمكنك استخدام المراجع التالية:</p>
+<ul>
+<li><strong>[<bdi dir="ltr" class="odt-ltr-term">ref1</bdi>]</strong>: كتاب &quot;<strong><bdi dir="ltr" class="odt-ltr-term">Pro</bdi></strong> <strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">AngularJS</bdi></span></strong>&quot; للكاتب <strong>آدم</strong> فريمان، الصادر عن <strong>دار <bdi dir="ltr" class="odt-ltr-term">Apress</bdi></strong>. إنه كتاب ممتاز. يتوفر كود المصدر للأمثلة الواردة في هذا الكتاب مجانًا على [<a href="http://www.apress.com/downloadable/download/sample/sample_id/1527/"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">http://www.apress.com/downloadable/download/sample/sample</bdi>_id/1527/</span></u></a>]؛</li>
+<li>[<strong><bdi dir="ltr" class="odt-ltr-term">ref2</bdi></strong>]: الوثائق الرسمية لـ <bdi dir="ltr" class="odt-ltr-term">AngularJS</bdi> [<a href="https://docs.angularjs.org/guide"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">https://docs.angularjs.org/guide</bdi></span></u></a>]</li>
+<li><strong>[<bdi dir="ltr" class="odt-ltr-term">ref3</bdi>]</strong>: كتاب &quot;<strong><bdi dir="ltr" class="odt-ltr-term">Spring Data</bdi></strong>&quot; من <bdi dir="ltr" class="odt-ltr-term">O</bdi>&#x27;<bdi dir="ltr" class="odt-ltr-term">Reilly</bdi> [<a href="http://shop.oreilly.com/product/0636920024767.do"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">http://shop.oreilly.com/product/0636920024767.do</bdi></span></u></a>]، الذي يغطي استخدام إطار عمل [<bdi dir="ltr" class="odt-ltr-term">Spring Data</bdi>] للوصول إلى البيانات، سواء من قواعد البيانات العلائقية أو قواعد البيانات غير العلائقية (<bdi dir="ltr" class="odt-ltr-term">NoSQL</bdi>)؛</li>
+<li>[<strong><bdi dir="ltr" class="odt-ltr-term">ref4</bdi></strong>]: كتاب &quot;<strong><bdi dir="ltr" class="odt-ltr-term">Pro Spring</bdi> 3</strong>&quot; الصادر عن <strong><bdi dir="ltr" class="odt-ltr-term">Apress</bdi></strong>. هذا هو سلف <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> 4، ولكنه يغطي المفاهيم الرئيسية بالفعل؛</li>
+<li>[<strong><bdi dir="ltr" class="odt-ltr-term">ref5</bdi></strong>]: الوثائق المرجعية لـ <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> 4 [<a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/pdf/spring-framework-reference.pdf"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">http://docs.spring.io/spring/docs/current/spring-framework-reference/pdf/spring-framework-reference.pdf</bdi></span></u></a>].</li>
+</ul>
+<p>المصادر المستخدمة في هذا المستند هي تلك المذكورة أعلاه، بالإضافة إلى [<a href="http://stackoverflow.com/"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">http://stackoverflow.com/</bdi></span></u></a>] الذي لا غنى عنه في العديد من جلسات تصحيح الأخطاء.</p>
+<p><a id="refheading99511454977699"></a></p>
+<h2 id="11">1.1. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">بنية التطبيق</span></strong></span></h2>
+<p><span style="color: #000000">ستتضمن التطبيق قيد الدراسة البنية التالية:</span></p>
+<p><img src="images/1000000000000294000002EC2BFC7EC3.png" width="396" height="449" style="width:10.479cm;height:11.876cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000294000002EC2BFC7EC3.png" /></p>
+<ul>
+<li><span style="color: #000000">في [1]، يقوم خادم الويب بتسليم صفحات ثابتة إلى المتصفح. تحتوي هذه الصفحات على تطبيق <bdi dir="ltr" class="odt-ltr-term">AngularJS</bdi> مبني على نمط <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> (<bdi dir="ltr" class="odt-ltr-term">Model</bdi>–<bdi dir="ltr" class="odt-ltr-term">View</bdi>–<bdi dir="ltr" class="odt-ltr-term">Controller</bdi>). يشمل النموذج هنا كلاً من طرق العرض والمجال، الممثلين هنا بطبقة [<bdi dir="ltr" class="odt-ltr-term">Services</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتفاعل المستخدم مع العروض المقدمة له في المتصفح. ستتطلب إجراءاته في بعض الأحيان الاستعلام عن خادم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> 4 [2]. سيقوم الخادم بمعالجة الطلب وإرجاع استجابة <bdi dir="ltr" class="odt-ltr-term">JSON</bdi> (<bdi dir="ltr" class="odt-ltr-term">JavaScript Object Notation</bdi>) [3]. ستُستخدم هذه الاستجابة لتحديث العرض المقدم للمستخدم.</span></li>
+</ul>
+<p><a id="refheading2334501890746156"></a></p>
+<h2 id="12">1.2. <span style="color: #4f81bd">الأدوات المستخدمة</span></h2>
+<p><span style="color: #000000">في هذا المستند، يتم استخدام أدوات التطوير التالية:</span></p>
+<ul>
+<li><a href="http://spring.io/tools/sts"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">Spring Tool Suite</bdi></span></u></a><span style="color: #000000"> لخادم <bdi dir="ltr" class="odt-ltr-term">Spring:</bdi> متاح للتنزيل مجانًا؛</span></li>
+<li><a href="http://www.jetbrains.com/webstorm/download/"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">WebStorm</bdi></span></u></a><span style="color: #000000"> لعميل <bdi dir="ltr" class="odt-ltr-term">Angular:</bdi> تتوفر نسخة تجريبية لمدة شهر واحد للتنزيل مجانًا؛</span></li>
+<li><a href="http://www.wampserver.com/"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">Wampserver</bdi></span></u></a><span style="color: #000000"> لإدارة قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> 5: متاح للتنزيل مجانًا؛</span></li>
+</ul>
+<p><span style="color: #000000">يتم وصف تثبيت هذه الأدوات وغيرها في القسم</span><a href="#refheading1633352067866943"><u><span style="color: #0563c1"> 6</span></u></a><span style="color: #000000">.</span></p>
+<p><a id="refheading569731429907001"></a></p>
+<h2 id="13">1.3. <span style="color: #4f81bd"><strong><span style="color: #4f81bd">ميزات التطبيق</span></strong></span></h2>
+<p>يتوفر نموذج الكود |هنا| كملف <em><bdi dir="ltr" class="odt-ltr-term">ZIP</bdi></em> قابل للتنزيل.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000143000000C518B73801.png" width="226" height="138" style="display:inline-block; margin:4px;width:5.98cm;height:3.648cm;" class="odt-zoomable" data-zoom-src="images/1000000000000143000000C518B73801.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C0000000698BA386CB.png" width="135" height="74" style="display:inline-block; margin:4px;width:3.56cm;height:1.947cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C0000000698BA386CB.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">يوجد الخادم في مجلدي [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-metier-dao-v2</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v3</bdi>]؛</span></li>
+<li><span style="color: #000000">يوجد العميل في المجلد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>]؛</span></li>
+<li><span style="color: #000000">يوجد البرنامج النصي <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> لإنشاء قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi> في المجلد [<bdi dir="ltr" class="odt-ltr-term">database</bdi>]؛</span>
+<a id="refheading569751429907001"></a></li>
+</ul>
+<h3 id="131">1.3.1. <span style="color: #4f81bd">إنشاء قاعدة البيانات</span></h3>
+<p><span style="color: #000000">لاختبار التطبيق، نقوم أولاً بإنشاء قاعدة البيانات باستخدام البرنامج النصي <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbrdvmedecins.sql</bdi>]. نستخدم أداة [<bdi dir="ltr" class="odt-ltr-term">PhpMyAdmin</bdi>] من <bdi dir="ltr" class="odt-ltr-term">WampServer:</bdi></span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007C70000029FB2050FBF.png" width="680" height="229" style="display:inline-block; margin:4px;width:17.999cm;height:6.066cm;" class="odt-zoomable" data-zoom-src="images/10000000000007C70000029FB2050FBF.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [1]، حدد أداة [<bdi dir="ltr" class="odt-ltr-term">phpMyAdmin</bdi>] من <bdi dir="ltr" class="odt-ltr-term">WampServer</bdi>؛</span></li>
+<li><span style="color: #000000">في [2]، حدد خيار [<bdi dir="ltr" class="odt-ltr-term">Import</bdi>]؛</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000069F000001FD91FB7BFE.png" width="680" height="204" style="display:inline-block; margin:4px;width:17.999cm;height:5.405cm;" class="odt-zoomable" data-zoom-src="images/100000000000069F000001FD91FB7BFE.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [3]، حدد الملف [<bdi dir="ltr" class="odt-ltr-term">database/dbrdvmedecins.sql</bdi>]؛</span></li>
+<li><span style="color: #000000">في [4]، قم بتشغيله؛</span></li>
+<li><span style="color: #000000">في [5]، يتم إنشاء قاعدة البيانات.</span></li>
+</ul>
+<p><a id="refheading569771429907001"></a></p>
+<h3 id="132-json">1.3.2. <span style="color: #4f81bd">خادم الويب / تنفيذ <bdi dir="ltr" class="odt-ltr-term">JSON</bdi></span></h3>
+<p><span style="color: #000000">باستخدام <bdi dir="ltr" class="odt-ltr-term">Spring Tool Suite</bdi> (<bdi dir="ltr" class="odt-ltr-term">STS</bdi>)، قم باستيراد مشروعي <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> لخادم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> 4:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007830000033FAE3B8968.png" width="680" height="294" style="display:inline-block; margin:4px;width:17.999cm;height:7.779cm;" class="odt-zoomable" data-zoom-src="images/10000000000007830000033FAE3B8968.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [1] و[2]، قم باستيراد مشاريع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi>؛</span></li>
+<li><span style="color: #000000">في [3]، نحدد المجلد الأصلي للمشروعين المراد استيرادهما؛</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B4000002F75DD11407.png" width="680" height="262" style="display:inline-block; margin:4px;width:17.999cm;height:6.929cm;" class="odt-zoomable" data-zoom-src="images/10000000000007B4000002F75DD11407.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [3]، المشاريع المستوردة. قد تحتوي المشاريع على أخطاء. يجب أن يستخدم كل منها مُجمِّعًا &gt;=1.7:</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002970000009EFA7963FB.png" width="464" height="111" style="display:inline-block; margin:4px;width:12.28cm;height:2.926cm;" class="odt-zoomable" data-zoom-src="images/10000000000002970000009EFA7963FB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<p><span style="color: #000000">لذلك، يلزم وجود إصدار <bdi dir="ltr" class="odt-ltr-term">JVM</bdi> &gt;=1.7:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D40000007A0EDB48C5.png" width="328" height="85" style="display:inline-block; margin:4px;width:8.67cm;height:2.26cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D40000007A0EDB48C5.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+
+<p><span style="color: #000000">بمجرد انتهاء أخطاء <bdi dir="ltr" class="odt-ltr-term">JVM</bdi>، يمكننا تشغيل مشروع [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v3</bdi>]:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007250000031CA4FC341D.png" width="680" height="296" style="display:inline-block; margin:4px;width:17.999cm;height:7.833cm;" class="odt-zoomable" data-zoom-src="images/10000000000007250000031CA4FC341D.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [4] و[5] و[6]، نقوم بتشغيل مشروع [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v3</bdi>] كتطبيق </span><a href="http://projects.spring.io/spring-boot/"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">Spring Boot</bdi></span></u></a><span style="color: #000000">؛</span></li>
+</ul>
+<p><span style="color: #000000">ثم نحصل على السجلات التالية في وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">STS:</bdi></span></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">.</span><span class="w">   </span><span class="nx">____</span><span class="w">          </span><span class="nx">_</span><span class="w">            </span><span class="nx">__</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="nx">_</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w"> </span><span class="o">/</span><span class="err">\\</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">___</span><span class="s1">&#39;_ __ _ _(_)_ __  __ _ \ \ \ \</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="s1">( ( )\___ | &#39;</span><span class="nx">_</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;_| | &#39;</span><span class="nx">_</span><span class="w"> </span><span class="err">\</span><span class="o">/</span><span class="w"> </span><span class="nx">_</span><span class="sb">` | \ \ \ \</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="sb"> \\/  ___)| |_)| | | | | || (_| |  ) ) ) )</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="sb">  &#39;  |____| .__|_| |_|_| |_\__, | / / / /</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="sb"> =========|_|==============|___/=/_/_/_/</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="sb"> :: Spring Boot ::        (v1.0.0.RELEASE)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="sb">2014-06-05 12:22:34.049  INFO 9296 --- [           main] rdvmedecins.web.boot.Boot                : Starting Boot on Gportpers3 with PID 9296 (D:\data\istia-1314\polys\istia\angularjs-spring4\rdvmedecins-webapi\target\classes started by ST)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="sb">2014-06-05 12:22:34.122  INFO 9296 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b4bee22: startup date [Thu Jun 05 12:22:34 CEST 2014]; root of context hierarchy</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="sb">2014-06-05 12:22:35.083  INFO 9296 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean &#39;org.springframework.boot.autoconfigure.AutoConfigurationPackages&#39;: replacing [Generic bean: class [org.springframework.boot.autoconfigure.AutoConfigurationPackages$BasePackages]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Generic bean: class [org.springframework.boot.autoconfigure.AutoConfigurationPackages$BasePackages]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="sb">...</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="sb"> s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080/http</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="sb">2014-06-05 12:22:41.630  INFO 9296 --- [           main] rdvmedecins.web.boot.Boot : Started Boot in 8.0 seconds (JVM running for 8.944)</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><span style="color: #000000">السطران 13-14: بدأ التطبيق على خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi></span>
+<a id="refheading1590371672552291"></a></li>
+</ul>
+<h3 id="133-angular">1.3.3. <span style="color: #4f81bd">تنفيذ عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi></span></h3>
+<p><span style="color: #000000">نفتح المجلد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>] باستخدام <bdi dir="ltr" class="odt-ltr-term">WebStorm:</bdi></span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E9000002A1694871D6.png" width="680" height="259" style="display:inline-block; margin:4px;width:17.999cm;height:6.847cm;" class="odt-zoomable" data-zoom-src="images/10000000000006E9000002A1694871D6.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [1]، حدد خيار [<bdi dir="ltr" class="odt-ltr-term">Open Directory</bdi>]؛</span></li>
+<li><span style="color: #000000">في [2]، حدد المجلد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>]؛</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C6000003E6AE578CB9.png" width="680" height="459" style="display:inline-block; margin:4px;width:17.999cm;height:12.153cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C6000003E6AE578CB9.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [3]، شجرة المجلدات؛</span></li>
+<li><span style="color: #000000">في [4]، حدد الصفحة الرئيسية للتطبيق [<bdi dir="ltr" class="odt-ltr-term">app.html</bdi>]؛</span></li>
+<li><span style="color: #000000">في [5]، افتحها في متصفح حديث؛</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007DF0000046C0B82B3CD.png" width="680" height="382" style="display:inline-block; margin:4px;width:17.999cm;height:10.112cm;" class="odt-zoomable" data-zoom-src="images/10000000000007DF0000046C0B82B3CD.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [6]، صفحة تسجيل الدخول إلى التطبيق. هذا تطبيق لحجز المواعيد للأطباء. وقد تمت تغطية هذا التطبيق بالفعل في الوثيقة </span><a href="http://tahe.developpez.com/java/primefaces/"><u><span style="color: #0563c1">&quot;مقدمة إلى أطر عمل <bdi dir="ltr" class="odt-ltr-term">JSF2</bdi> و <bdi dir="ltr" class="odt-ltr-term">PrimeFaces</bdi> و <bdi dir="ltr" class="odt-ltr-term">PrimeFaces Mobile</bdi></span></u></a><span style="color: #000000">&quot;؛</span></li>
+<li><span style="color: #000000">في [7]، مربع اختيار يسمح لك بتمكين أو تعطيل وضع [<bdi dir="ltr" class="odt-ltr-term">debug</bdi>]. يُشار إلى هذا الوضع بوجود الإطار [8]، الذي يعرض نموذج العرض الحالي؛</span></li>
+<li><span style="color: #000000">في [9]، وقت انتظار مصطنع بالمللي ثانية. القيمة الافتراضية هي 0 (بدون انتظار). إذا كانت <bdi dir="ltr" class="odt-ltr-term">N</bdi> هي قيمة وقت الانتظار هذا، فسيتم تنفيذ أي إجراء من جانب المستخدم بعد وقت انتظار يبلغ <bdi dir="ltr" class="odt-ltr-term">N</bdi> مللي ثانية. يتيح لك ذلك رؤية إدارة الانتظار التي ينفذها التطبيق؛</span></li>
+<li><span style="color: #000000">في [10]، عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخادم <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> 4. بناءً على ما سبق، يكون هذا [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080</bdi>]؛</span></li>
+<li><span style="color: #000000">في [11] و[12]، اسم المستخدم وكلمة المرور للمستخدم الذي يرغب في استخدام التطبيق. يوجد مستخدمان: </span><strong><bdi dir="ltr" class="odt-ltr-term">admin/admin</bdi></strong> <span style="color: #000000">(اسم المستخدم/كلمة المرور) مع دور (<bdi dir="ltr" class="odt-ltr-term">ADMIN</bdi>) و </span><strong><bdi dir="ltr" class="odt-ltr-term">user/user</bdi></strong> <span style="color: #000000">مع دور (<bdi dir="ltr" class="odt-ltr-term">USER</bdi>). دور <bdi dir="ltr" class="odt-ltr-term">ADMIN</bdi> هو الوحيد الذي يمتلك إذنًا لاستخدام التطبيق. تم تضمين دور <bdi dir="ltr" class="odt-ltr-term">USER</bdi> فقط لتوضيح استجابة الخادم في حالة الاستخدام هذه؛</span></li>
+<li><span style="color: #000000">في [13]، الزر الذي يسمح لك بالاتصال بالخادم؛</span></li>
+<li><span style="color: #000000">في [14]، لغة التطبيق. هناك لغتان: الفرنسية (الافتراضية) والإنجليزية.</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003F1000000CD42CB2AB2.png" width="505" height="103" style="display:inline-block; margin:4px;width:13.349cm;height:2.713cm;" class="odt-zoomable" data-zoom-src="images/10000000000003F1000000CD42CB2AB2.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [1]، تقوم بتسجيل الدخول؛</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003EF0000047D121B03AF.png" width="504" height="575" style="display:inline-block; margin:4px;width:13.323cm;height:15.201cm;" class="odt-zoomable" data-zoom-src="images/10000000000003EF0000047D121B03AF.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">بمجرد تسجيل الدخول، يمكنك اختيار الطبيب الذي تريد حجز موعد معه [2] وتاريخ الموعد [3]؛</span></li>
+<li><span style="color: #000000">في [4]، تطلب عرض جدول مواعيد الطبيب المحدد لليوم المختار؛</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000039F000003E89CBA1112.png" width="464" height="500" style="display:inline-block; margin:4px;width:12.264cm;height:13.229cm;" class="odt-zoomable" data-zoom-src="images/100000000000039F000003E89CBA1112.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">بمجرد عرض جدول مواعيد الطبيب، يمكنك حجز موعد [5]؛</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046D00000344CC2465C5.png" width="567" height="418" style="display:inline-block; margin:4px;width:14.99cm;height:11.061cm;" class="odt-zoomable" data-zoom-src="images/100000000000046D00000344CC2465C5.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [6]، حدد المريض الذي سيحضر الموعد وقم بتأكيد اختيارك في [7]؛</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000432000003EF376EAFAF.png" width="537" height="504" style="display:inline-block; margin:4px;width:14.208cm;height:13.323cm;" class="odt-zoomable" data-zoom-src="images/1000000000000432000003EF376EAFAF.png" /></td></tr></table>
+
+<p><span style="color: #000000">بمجرد تأكيد الموعد، ستعود تلقائيًا إلى الجدول حيث يظهر الموعد الجديد الآن. يمكن حذف هذا الموعد لاحقًا [7].</span></p>
+<p><span style="color: #000000">تم وصف الميزات الرئيسية. وهي بسيطة. أما الميزات التي لم يتم وصفها فهي وظائف التنقل للعودة إلى عرض سابق. لنختتم بإعدادات اللغة:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005BA000003B62BAA3BC6.png" width="680" height="441" style="display:inline-block; margin:4px;width:17.999cm;height:11.665cm;" class="odt-zoomable" data-zoom-src="images/10000000000005BA000003B62BAA3BC6.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [1]، يمكنك التبديل من الفرنسية إلى الإنجليزية؛</span></li>
+</ul>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000058E000003B4AAC56BD7.png" width="680" height="454" style="display:inline-block; margin:4px;width:17.999cm;height:12cm;" class="odt-zoomable" data-zoom-src="images/100000000000058E000003B4AAC56BD7.png" /></td></tr></table>
+
+<ul>
+<li><span style="color: #000000">في [2]، تتحول الواجهة إلى الإنجليزية، بما في ذلك التقويم؛</span></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        هذا البرنامج التعليمي الذي كتبه <strong>Serge Tahé</strong> متاح للجمهور وفقًا لشروط
+<em>Creative Commons Attribution – Non-commercial –
+Share Alike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
