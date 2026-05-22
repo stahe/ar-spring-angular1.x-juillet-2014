@@ -585,7 +585,7 @@
 <p><a id="refheading112470271450484"></a></p>
 <h2 id="41-tomcat">4.1. <span style="color: #4f81bd">نشر خدمة الويب على خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi></span></h2>
 <p>لقد رأينا في القسم<a href="#refheading570371429907001"><u><span style="color: #0563c1"> 2.11.9</span></u></a> كيفية إنشاء أرشيف <bdi dir="ltr" class="odt-ltr-term">WAR</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> نكرر العملية هنا. أولاً، للحفاظ على الهيكل الحالي، نقوم بنسخ مشروع <bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v3</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000000A1154D1075.png" width="172" height="113" style="display:inline-block; margin:4px;width:4.56cm;height:2.985cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000A1154D1075.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F6000000A1154D1075.png" width="172" height="113" style="display:inline-block; margin:4px;width:4.56cm;height:2.985cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000A1154D1075.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>تم تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -635,7 +635,7 @@
 </ul>
 
 <p>يجب عليك أيضًا تكوين تطبيق الويب. في حالة عدم وجود ملف [<bdi dir="ltr" class="odt-ltr-term">web.xml</bdi>]، يتم ذلك باستخدام فئة تمتد من [<span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">SpringBootServletInitializer</bdi></span>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F400000094D667F11D.png" width="171" height="104" style="display:inline-block; margin:4px;width:4.521cm;height:2.743cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F400000094D667F11D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F400000094D667F11D.png" width="171" height="104" style="display:inline-block; margin:4px;width:4.521cm;height:2.743cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F400000094D667F11D.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>فيما يلي فئة [<bdi dir="ltr" class="odt-ltr-term">ApplicationInitializer</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -664,7 +664,7 @@
 
 <p>بمجرد الانتهاء من ذلك، قد تحتاج إلى تحديث مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> (اضطررت إلى القيام بذلك): [انقر بزر الماوس الأيمن على المشروع / <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> / تحديث المشروع] أو [<bdi dir="ltr" class="odt-ltr-term">Alt-F5</bdi>].</p>
 <p>لتشغيل المشروع، اتبع الخطوات التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005750000017652375D89.png" width="680" height="182" style="display:inline-block; margin:4px;width:17.999cm;height:4.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000005750000017652375D89.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005750000017652375D89.png" width="680" height="182" style="display:inline-block; margin:4px;width:17.999cm;height:4.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000005750000017652375D89.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، قم بتشغيل المشروع على أحد الخوادم المسجلة في بيئة تطوير <bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi>؛
@@ -674,23 +674,23 @@
 </ul>
 
 <p>ستحصل على النتيجة التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001F400000138F1D94013.png" width="350" height="218" style="display:inline-block; margin:4px;width:9.26cm;height:5.779cm;" class="odt-zoomable" data-zoom-src="images/10000000000001F400000138F1D94013.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001F400000138F1D94013.png" width="350" height="218" style="display:inline-block; margin:4px;width:9.26cm;height:5.779cm;" class="odt-zoomable" data-zoom-src="images/10000000000001F400000138F1D94013.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>هذا أمر طبيعي. تذكر أن خدمة الويب لا تحتوي على عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [/] في أساليبها. عند تجربة عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [/<bdi dir="ltr" class="odt-ltr-term">getAllMedecins</bdi>]، ستحصل على الاستجابة التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002620000015B5448B8AD.png" width="427" height="243" style="display:inline-block; margin:4px;width:11.299cm;height:6.428cm;" class="odt-zoomable" data-zoom-src="images/10000000000002620000015B5448B8AD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002620000015B5448B8AD.png" width="427" height="243" style="display:inline-block; margin:4px;width:11.299cm;height:6.428cm;" class="odt-zoomable" data-zoom-src="images/10000000000002620000015B5448B8AD.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>هذا أمر طبيعي. خدمة الويب محمية.</p>
 <p>الآن دعونا نطلق العميل [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>] في <bdi dir="ltr" class="odt-ltr-term">WebStorm:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000056E000000D7B5440FB6.png" width="680" height="105" style="display:inline-block; margin:4px;width:17.999cm;height:2.783cm;" class="odt-zoomable" data-zoom-src="images/100000000000056E000000D7B5440FB6.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000056E000000D7B5440FB6.png" width="680" height="105" style="display:inline-block; margin:4px;width:17.999cm;height:2.783cm;" class="odt-zoomable" data-zoom-src="images/100000000000056E000000D7B5440FB6.png" /></td></tr></table>
 
 <p>في [1]، أدخل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخدمة الويب الجديدة [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4</bdi>]. نحصل على النتيجة التالية:</p>
 <p><img src="images/10000000000004B4000002A9BA88E4D6.png" width="794" height="449" style="width:21.001cm;height:11.878cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004B4000002A9BA88E4D6.png" /></p>
 <p>لتشغيل التطبيق خارج بيئة تطوير <bdi dir="ltr" class="odt-ltr-term">STS</bdi>، هناك حلول متنوعة. وإليك أحدها.</p>
 <p>قم بتنزيل إصدار من <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://tomcat.apache.org/download-80.cgi</bdi>] (يوليو 2014):</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000500000001FFCB6B987D.png" width="640" height="255" style="display:inline-block; margin:4px;width:16.933cm;height:6.759cm;" class="odt-zoomable" data-zoom-src="images/1000000000000500000001FFCB6B987D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000500000001FFCB6B987D.png" width="640" height="255" style="display:inline-block; margin:4px;width:16.933cm;height:6.759cm;" class="odt-zoomable" data-zoom-src="images/1000000000000500000001FFCB6B987D.png" /></td></tr></table>
 
 <p>اختر نسخة مضغوطة في [1] وقم بفك ضغطها في [2]. ارجع إلى <bdi dir="ltr" class="odt-ltr-term">STS:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A7000001B552C53DAA.png" width="680" height="205" style="display:inline-block; margin:4px;width:17.999cm;height:5.436cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A7000001B552C53DAA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005A7000001B552C53DAA.png" width="680" height="205" style="display:inline-block; margin:4px;width:17.999cm;height:5.436cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A7000001B552C53DAA.png" /></td></tr></table>
 
 <ul>
   <li>في علامة التبويب [الخوادم]، انقر بزر الماوس الأيمن على تطبيق [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] واختر خيار [استعراض موقع النشر]؛
@@ -699,7 +699,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045E000001F122FC5F51.png" width="559" height="249" style="display:inline-block; margin:4px;width:14.79cm;height:6.576cm;" class="odt-zoomable" data-zoom-src="images/100000000000045E000001F122FC5F51.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000045E000001F122FC5F51.png" width="559" height="249" style="display:inline-block; margin:4px;width:14.79cm;height:6.576cm;" class="odt-zoomable" data-zoom-src="images/100000000000045E000001F122FC5F51.png" /></td></tr></table>
 
 <ul>
   <li>في [5]، الصق المجلد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] في مجلد <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> [<bdi dir="ltr" class="odt-ltr-term">webapps</bdi>]؛
@@ -709,7 +709,7 @@
 </ul>
 
 <p>للتحقق من ذلك، قم بتشغيل عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>] مرة أخرى في <bdi dir="ltr" class="odt-ltr-term">WebStorm:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000573000000CDB4E412AB.png" width="680" height="100" style="display:inline-block; margin:4px;width:17.999cm;height:2.646cm;" class="odt-zoomable" data-zoom-src="images/1000000000000573000000CDB4E412AB.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000573000000CDB4E412AB.png" width="680" height="100" style="display:inline-block; margin:4px;width:17.999cm;height:2.646cm;" class="odt-zoomable" data-zoom-src="images/1000000000000573000000CDB4E412AB.png" /></td></tr></table>
 
 <p>في [1]، أدخل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخدمة الويب الجديدة [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4</bdi>]. سترى النتيجة التالية:</p>
 <p><img src="images/10000000000004B4000002A9BA88E4D6.png" width="794" height="449" style="width:21.001cm;height:11.878cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004B4000002A9BA88E4D6.png" /></p>
@@ -717,7 +717,7 @@
 <h2 id="42-angular-tomcat">4.2. <span style="color: #4f81bd">نشر عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> على خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi></span></h2>
 <p>الآن بعد أن تم نشر خدمة الويب على <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi>، سنقوم بنشر عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> على الخادم أيضًا. يمكن أن يكون هذا هو الخادم الذي يستضيف خدمة الويب بالفعل. سنتبع هذا النهج.</p>
 <p>أولاً، نقوم بنسخ العميل [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v3</bdi>] ونجري التغييرات التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003980000019CF396B9A2.png" width="460" height="206" style="display:inline-block; margin:4px;width:12.171cm;height:5.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000003980000019CF396B9A2.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003980000019CF396B9A2.png" width="460" height="206" style="display:inline-block; margin:4px;width:12.171cm;height:5.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000003980000019CF396B9A2.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، تم نقل كل شيء إلى مجلد باسم [<a id="creation-app"></a> app]؛
@@ -777,17 +777,17 @@
 </code></pre></div>
 
 <p>الآن بعد الانتهاء من ذلك، دعونا نقوم بتشغيل ملف [<bdi dir="ltr" class="odt-ltr-term">index.html</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F900000184DBAA64E0.png" width="174" height="272" style="display:inline-block; margin:4px;width:4.611cm;height:7.184cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F900000184DBAA64E0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DE0000006C4B136E18.png" width="155" height="76" style="display:inline-block; margin:4px;width:4.11cm;height:1.998cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE0000006C4B136E18.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F900000184DBAA64E0.png" width="174" height="272" style="display:inline-block; margin:4px;width:4.611cm;height:7.184cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F900000184DBAA64E0.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000DE0000006C4B136E18.png" width="155" height="76" style="display:inline-block; margin:4px;width:4.11cm;height:1.998cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE0000006C4B136E18.png" /></td></tr></table>
 
 <p>ثم دعونا نسجل الدخول إلى خدمة الويب. من المفترض أن تعمل. بمجرد التحقق من ذلك، دعونا نوقف خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> سنعيد استخدام خادم <bdi dir="ltr" class="odt-ltr-term">STS</bdi> المدمج.</p>
 <p>في <bdi dir="ltr" class="odt-ltr-term">STS</bdi>، انسخ محتويات مجلد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v3/app</bdi>] بالكامل إلى مجلد [<bdi dir="ltr" class="odt-ltr-term">webapp</bdi>] في مشروع [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] (علامة التبويب <em><bdi dir="ltr" class="odt-ltr-term">Navigator</bdi></em>) [1]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000038F000002644A182322.png" width="456" height="306" style="display:inline-block; margin:4px;width:12.053cm;height:8.096cm;" class="odt-zoomable" data-zoom-src="images/100000000000038F000002644A182322.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000038F000002644A182322.png" width="456" height="306" style="display:inline-block; margin:4px;width:12.053cm;height:8.096cm;" class="odt-zoomable" data-zoom-src="images/100000000000038F000002644A182322.png" /></td></tr></table>
 
 <p>بمجرد الانتهاء من ذلك، قم بتشغيل [2] خادم <bdi dir="ltr" class="odt-ltr-term">STS VMware</bdi>، ثم اطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4/app/index.html</bdi>]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034D000002C10CB0CB6F.png" width="423" height="353" style="display:inline-block; margin:4px;width:11.18cm;height:9.327cm;" class="odt-zoomable" data-zoom-src="images/100000000000034D000002C10CB0CB6F.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000034D000002C10CB0CB6F.png" width="423" height="353" style="display:inline-block; margin:4px;width:11.18cm;height:9.327cm;" class="odt-zoomable" data-zoom-src="images/100000000000034D000002C10CB0CB6F.png" /></td></tr></table>
 
 <p>نواجه مشكلة في الأذونات عند [3]. وهذا ليس مفاجئًا نظرًا لأننا قمنا بتأمين خدمة الويب. نحتاج إلى تحديد أن الوصول إلى الملف [/<bdi dir="ltr" class="odt-ltr-term">app/index.html</bdi>] غير مقيد. لنعد إلى <bdi dir="ltr" class="odt-ltr-term">Eclipse:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F4000000CD22F5BACE.png" width="171" height="144" style="display:inline-block; margin:4px;width:4.521cm;height:3.798cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F4000000CD22F5BACE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F4000000CD22F5BACE.png" width="171" height="144" style="display:inline-block; margin:4px;width:4.521cm;height:3.798cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F4000000CD22F5BACE.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>تذكر أن أذونات الوصول تم تعريفها في فئة [<bdi dir="ltr" class="odt-ltr-term">SecurityConfig</bdi>]. دعونا نعدلها على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -829,7 +829,7 @@
 </ul>
 
 <p>وبالتالي، فإن عميل <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> وخدمة الويب موجودان على نفس الخادم [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080</bdi>]. لا توجد تعارضات <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> لأن هذه التعارضات تحدث فقط عندما لا يكون العميل والخادم في نفس المجال. يجب أن نتمكن من التحقق من ذلك. دعونا نعود إلى <bdi dir="ltr" class="odt-ltr-term">STS:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EA000000C709556DD7.png" width="164" height="139" style="display:inline-block; margin:4px;width:4.33cm;height:3.681cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EA000000C709556DD7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000EA000000C709556DD7.png" width="164" height="139" style="display:inline-block; margin:4px;width:4.33cm;height:3.681cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EA000000C709556DD7.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>يتم التحكم في إنشاء رؤوس <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> من خلال متغير منطقي محدد في فئة [<bdi dir="ltr" class="odt-ltr-term">ApplicationModel</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -841,7 +841,7 @@
 <p><a id="refheading112476271450484"></a></p>
 <h2 id="44-angular-android">4.4. <span style="color: #4f81bd">نشر عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> على جهاز لوحي يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Android</bdi></span></h2>
 <p>تتيح لك أداة [<bdi dir="ltr" class="odt-ltr-term">Phonegap</bdi>] [<bdi dir="ltr" class="odt-ltr-term">http://phonegap.com/</bdi>] إنشاء ملف قابل للتنفيذ على الأجهزة المحمولة (<bdi dir="ltr" class="odt-ltr-term">Android</bdi>، <bdi dir="ltr" class="odt-ltr-term">iOS</bdi>، <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> 8، إلخ) من تطبيق <bdi dir="ltr" class="odt-ltr-term">HTML/JS/CSS.</bdi> هناك طرق مختلفة لتحقيق ذلك. سنستخدم أبسطها: أداة عبر الإنترنت متوفرة على موقع <bdi dir="ltr" class="odt-ltr-term">Phonegap</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://build.phonegap.com/apps</bdi>].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000508000001E0E493FB62.png" width="644" height="240" style="display:inline-block; margin:4px;width:17.039cm;height:6.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000508000001E0E493FB62.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000508000001E0E493FB62.png" width="644" height="240" style="display:inline-block; margin:4px;width:17.039cm;height:6.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000508000001E0E493FB62.png" /></td></tr></table>
 
 <ul>
   <li>قبل [1]، قد تحتاج إلى إنشاء حساب؛
@@ -852,14 +852,14 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053700000104D2C8C565.png" width="668" height="130" style="display:inline-block; margin:4px;width:17.662cm;height:3.44cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000104D2C8C565.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000053700000104D2C8C565.png" width="668" height="130" style="display:inline-block; margin:4px;width:17.662cm;height:3.44cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000104D2C8C565.png" /></td></tr></table>
 
 <ul>
   <li>في [3]، قم بتنزيل التطبيق المضغوط [4] (المجلد [app] الذي تم إنشاؤه في القسم<a href="#creation-app"><u><span style="color: #0563c1"> 4.2</span></u></a> مضغوط)؛
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000058E000001A8102589EA.png" width="680" height="203" style="display:inline-block; margin:4px;width:17.999cm;height:5.368cm;" class="odt-zoomable" data-zoom-src="images/100000000000058E000001A8102589EA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000058E000001A8102589EA.png" width="680" height="203" style="display:inline-block; margin:4px;width:17.999cm;height:5.368cm;" class="odt-zoomable" data-zoom-src="images/100000000000058E000001A8102589EA.png" /></td></tr></table>
 
 <ul>
   <li>في [5]، قم بتسمية التطبيق؛
@@ -868,7 +868,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000036D000001AB246FEA43.png" width="439" height="214" style="display:inline-block; margin:4px;width:11.603cm;height:5.65cm;" class="odt-zoomable" data-zoom-src="images/100000000000036D000001AB246FEA43.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000036D000001AB246FEA43.png" width="439" height="214" style="display:inline-block; margin:4px;width:11.603cm;height:5.65cm;" class="odt-zoomable" data-zoom-src="images/100000000000036D000001AB246FEA43.png" /></td></tr></table>
 
 <ul>
   <li>تم إنشاء ملفات <bdi dir="ltr" class="odt-ltr-term">Android</bdi> [7] و <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> [8] الثنائية فقط؛
@@ -877,7 +877,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016D000000C8628D9981.png" width="183" height="100" style="display:inline-block; margin:4px;width:4.83cm;height:2.648cm;" class="odt-zoomable" data-zoom-src="images/100000000000016D000000C8628D9981.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000016D000000C8628D9981.png" width="183" height="100" style="display:inline-block; margin:4px;width:4.83cm;height:2.648cm;" class="odt-zoomable" data-zoom-src="images/100000000000016D000000C8628D9981.png" /></td></tr></table>
 
 <ul>
   <li>في [9]، الملف الثنائي [apk] الذي تم تنزيله؛
@@ -885,7 +885,7 @@
 </ul>
 
 <p>قم بتشغيل محاكي [<bdi dir="ltr" class="odt-ltr-term">GenyMotion</bdi>] لجهاز لوحي يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Android</bdi> (انظر القسم<a href="#refheading454551405398942"><u><span style="color: #0563c1"> 6.4</span></u></a>):</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017900000131A1D5D594.png" width="264" height="213" style="display:inline-block; margin:4px;width:6.98cm;height:5.646cm;" class="odt-zoomable" data-zoom-src="images/100000000000017900000131A1D5D594.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000017900000131A1D5D594.png" width="264" height="213" style="display:inline-block; margin:4px;width:6.98cm;height:5.646cm;" class="odt-zoomable" data-zoom-src="images/100000000000017900000131A1D5D594.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>أعلاه، نقوم بتشغيل محاكي جهاز لوحي مع <bdi dir="ltr" class="odt-ltr-term">Android API</bdi> 16. بمجرد تشغيل المحاكي، </p>
 <ul>
@@ -895,7 +895,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005CB00000287923DA7F0.png" width="680" height="297" style="display:inline-block; margin:4px;width:17.999cm;height:7.853cm;" class="odt-zoomable" data-zoom-src="images/10000000000005CB00000287923DA7F0.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005CB00000287923DA7F0.png" width="680" height="297" style="display:inline-block; margin:4px;width:17.999cm;height:7.853cm;" class="odt-zoomable" data-zoom-src="images/10000000000005CB00000287923DA7F0.png" /></td></tr></table>
 
 <p>تحتاج إلى تغيير عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> إلى [1]. للقيام بذلك، في نافذة موجه الأوامر، اكتب الأمر [<bdi dir="ltr" class="odt-ltr-term">ipconfig</bdi>] (السطر 1 أدناه)، والذي سيعرض عناوين <bdi dir="ltr" class="odt-ltr-term">IP</bdi> المختلفة لجهازك:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -926,10 +926,10 @@
 </code></pre></div>
 
 <p>قم بتدوين عنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> لشبكة <bdi dir="ltr" class="odt-ltr-term">Wi-Fi</bdi> (الأسطر 6–9) أو عنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> للشبكة المحلية (الأسطر 11–17). ثم استخدم عنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> هذا في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخادم الويب:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000296000000A328455688.png" width="463" height="114" style="display:inline-block; margin:4px;width:12.261cm;height:3.02cm;" class="odt-zoomable" data-zoom-src="images/1000000000000296000000A328455688.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000296000000A328455688.png" width="463" height="114" style="display:inline-block; margin:4px;width:12.261cm;height:3.02cm;" class="odt-zoomable" data-zoom-src="images/1000000000000296000000A328455688.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <p>بمجرد الانتهاء من ذلك، قم بالاتصال بخدمة الويب:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F30000039471040E7F.png" width="794" height="477" style="display:inline-block; margin:4px;width:21.001cm;height:12.631cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F30000039471040E7F.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005F30000039471040E7F.png" width="794" height="477" style="display:inline-block; margin:4px;width:21.001cm;height:12.631cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F30000039471040E7F.png" /></td></tr></table>
 
 <p>اختبر التطبيق على المحاكي. من المفترض أن يعمل. على جانب الخادم، يمكنك السماح أو عدم السماح برؤوس <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> في فئة [<bdi dir="ltr" class="odt-ltr-term">ApplicationModel</bdi>]: </p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -941,7 +941,7 @@
 <p><a id="refheading112968271450484"></a></p>
 <h2 id="45-angular-android">4.5. <span style="color: #4f81bd">نشر عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> على محاكي هاتف ذكي يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Android</bdi></span></h2>
 <p>نكرر الخطوة السابقة باستخدام محاكي هاتف ذكي. نريد التحقق من كيفية عمل عميلنا على الشاشات الصغيرة:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000057E0000023E9AA273B1.png" width="680" height="278" style="display:inline-block; margin:4px;width:17.999cm;height:7.348cm;" class="odt-zoomable" data-zoom-src="images/100000000000057E0000023E9AA273B1.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000057E0000023E9AA273B1.png" width="680" height="278" style="display:inline-block; margin:4px;width:17.999cm;height:7.348cm;" class="odt-zoomable" data-zoom-src="images/100000000000057E0000023E9AA273B1.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، نقوم بتشغيل محاكي الهاتف الذكي؛
@@ -950,7 +950,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000545000002E3F9851CE8.png" width="675" height="370" style="display:inline-block; margin:4px;width:17.847cm;height:9.777cm;" class="odt-zoomable" data-zoom-src="images/1000000000000545000002E3F9851CE8.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000545000002E3F9851CE8.png" width="675" height="370" style="display:inline-block; margin:4px;width:17.847cm;height:9.777cm;" class="odt-zoomable" data-zoom-src="images/1000000000000545000002E3F9851CE8.png" /></td></tr></table>
 
 <ul>
   <li>في [4]، نقوم بتسجيل الدخول؛
@@ -959,7 +959,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053400000203A1D37D3B.png" width="666" height="257" style="display:inline-block; margin:4px;width:17.621cm;height:6.812cm;" class="odt-zoomable" data-zoom-src="images/100000000000053400000203A1D37D3B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000053400000203A1D37D3B.png" width="666" height="257" style="display:inline-block; margin:4px;width:17.621cm;height:6.812cm;" class="odt-zoomable" data-zoom-src="images/100000000000053400000203A1D37D3B.png" /></td></tr></table>
 
 <ul>
   <li>في [6]، نطلب التقويم؛
@@ -968,7 +968,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002C3000001E6B549C8DC.png" width="354" height="243" style="display:inline-block; margin:4px;width:9.354cm;height:6.429cm;" class="odt-zoomable" data-zoom-src="images/10000000000002C3000001E6B549C8DC.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002C3000001E6B549C8DC.png" width="354" height="243" style="display:inline-block; margin:4px;width:9.354cm;height:6.429cm;" class="odt-zoomable" data-zoom-src="images/10000000000002C3000001E6B549C8DC.png" /></td></tr></table>
 
 <ul>
   <li>في [8]، نفس العرض كما في السابق، ولكن هذه المرة مع موعد.
