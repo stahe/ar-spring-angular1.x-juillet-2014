@@ -490,10 +490,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#45-angular-android" class="md-nav__link">
+  <a href="#45-angular" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.5. نشر عميل Angular على محاكي هاتف ذكي يعمل بنظام Android
+        4.5. نشر عميل Angular على محاكي هاتف ذكي يعمل بنظام أندرويد
       
     </span>
   </a>
@@ -542,14 +542,14 @@
   
   
     <li class="md-nav__item">
-      <a href="lmlq.html" class="md-nav__link">
+      <a href="lmrfqt.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. الملاحق
+    6. المرفقات
   
 
     
@@ -579,22 +579,22 @@
 
 
 
-<p><a id="refheading112468271450484"></a></p>
+<p><span id="refheading112468271450484" name="refheading112468271450484" class="odt-bookmark-anchor"></span></p>
 <h1 id="4">4. <span style="color: #365f91">تشغيل التطبيق</span></h1>
-<p>نريد الآن تشغيل التطبيق خارج بيئة تطوير <bdi dir="ltr" class="odt-ltr-term">STS</bdi> (للخادم) و <bdi dir="ltr" class="odt-ltr-term">WebStorm</bdi> (للعميل).</p>
-<p><a id="refheading112470271450484"></a></p>
-<h2 id="41-tomcat">4.1. <span style="color: #4f81bd">نشر خدمة الويب على خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi></span></h2>
-<p>لقد رأينا في القسم<a href="#refheading570371429907001"><u><span style="color: #0563c1"> 2.11.9</span></u></a> كيفية إنشاء أرشيف <bdi dir="ltr" class="odt-ltr-term">WAR</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> نكرر العملية هنا. أولاً، للحفاظ على الهيكل الحالي، نقوم بنسخ مشروع <bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v3</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>].</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F6000000A1154D1075.png" width="172" height="113" style="display:inline-block; margin:4px;width:4.56cm;height:2.985cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000A1154D1075.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+<p>نرغب الآن في تشغيل التطبيق خارج نطاق <bdi dir="ltr" class="odt-ltr-term">IDE</bdi> و<bdi dir="ltr" class="odt-ltr-term">STS</bdi> (للخادم) و<bdi dir="ltr" class="odt-ltr-term">Webstorm</bdi> (للعميل).</p>
+<p><span id="refheading112470271450484" name="refheading112470271450484" class="odt-bookmark-anchor"></span></p>
+<h2 id="41-tomcat">4.1. <span style="color: #4f81bd"><strong>نشر خدمة الويب على خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi></strong></span></h2>
+<p>لقد رأينا في الفقرة<a href="khdm-spring-4.html#refheading570371429907001"><u><span style="color: #0563c1"> 2.11.9</span></u></a> كيفية إنشاء أرشيف war لـ <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> نكرر العملية هنا. أولاً، للحفاظ على ما هو موجود، نقوم بنسخ مشروع <bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v3</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>].</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F6000000A1154D1075.png" width="172" height="113" style="display:inline-block; margin:4px;width:4.56cm;height:2.979cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000A1154D1075.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<p>تم تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] على النحو التالي:</p>
+<p>يتم تعديل الملف [<bdi dir="ltr" class="odt-ltr-term">pom.xml</bdi>] على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span><span style="color:#000000">4.0.0</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">istia.st.spring4.mvc</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span><span style="color:#000000">rdvmedecins-webapi-v4</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">artifactId</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span><span style="color:#000000">0.0.1-SNAPSHOT</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">version</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">packaging</span><span style="color:#008080">&gt;</span><span style="color:#000000">war</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">packaging</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">name</span><span style="color:#008080">&gt;</span><span style="color:#000000">rdvmedecins-webapi-v3</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">name</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">description</span><span style="color:#008080">&gt;</span><span style="color:#000000">Gestion de RV Médecins</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">description</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">parent</span><span style="color:#008080">&gt;</span></span></span>
@@ -624,76 +624,76 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">dependencies</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>يجب إجراء التغييرات في مكانين:</p>
+<p>يجب إجراء التعديلات في مكانين:</p>
 <ul>
-  <li>السطر 5: يجب تحديد أنك ستقوم بإنشاء ملف <bdi dir="ltr" class="odt-ltr-term">WAR</bdi> (<bdi dir="ltr" class="odt-ltr-term">Web ARchive</bdi>)؛
+  <li>السطر 5: يجب الإشارة إلى أنه سيتم إنشاء أرشيف war (<bdi dir="ltr" class="odt-ltr-term">Web ARchive</bdi>)؛
   </li>
-  <li>الأسطر 23–27: يجب إضافة تبعية إلى عنصر [<span style="color: #ff3333"><bdi dir="ltr" class="odt-ltr-term">spring-boot-starter-tomcat</bdi></span>]. يتضمن هذا العنصر جميع فئات <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> في تبعيات المشروع؛
+  <li>الأسطر 23-27: يجب إضافة تبعية إلى الأرتيفاكت [<bdi dir="ltr" class="odt-ltr-term">spring-boot-starter-tomcat</bdi>]. يضيف هذا الأرتيفاكت جميع فئات <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> إلى تبعيات المشروع؛
   </li>
-  <li>السطر 26: هذه المكونة [متوفرة]، مما يعني أن الملفات المقابلة لن يتم تضمينها في ملف <bdi dir="ltr" class="odt-ltr-term">WAR</bdi> الذي تم إنشاؤه. بدلاً من ذلك، ستكون هذه الملفات موجودة على خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> حيث سيتم تشغيل التطبيق؛
+  <li>السطر 26: هذه المكونة هي [<bdi dir="ltr" class="odt-ltr-term">provided</bdi>]، أي أن الملفات المضغوطة المقابلة لن يتم وضعها في ملف war الذي سيتم إنشاؤه. في الواقع، سيتم العثور على هذه الملفات المضغوطة على خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> الذي سيتم تشغيل التطبيق عليه؛
   </li>
 </ul>
 
-<p>يجب عليك أيضًا تكوين تطبيق الويب. في حالة عدم وجود ملف [<bdi dir="ltr" class="odt-ltr-term">web.xml</bdi>]، يتم ذلك باستخدام فئة تمتد من [<span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">SpringBootServletInitializer</bdi></span>]:</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F400000094D667F11D.png" width="171" height="104" style="display:inline-block; margin:4px;width:4.521cm;height:2.743cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F400000094D667F11D.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+<p>كما يجب تكوين تطبيق الويب. في حالة عدم وجود ملف [<bdi dir="ltr" class="odt-ltr-term">web.xml</bdi>]، يتم ذلك باستخدام فئة ترث من [<bdi dir="ltr" class="odt-ltr-term">SpringBootServletInitializer</bdi>]:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F400000094D667F11D.png" width="171" height="104" style="display:inline-block; margin:4px;width:4.521cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F400000094D667F11D.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<p>فيما يلي فئة [<bdi dir="ltr" class="odt-ltr-term">ApplicationInitializer</bdi>]:</p>
+<p>الفئة [<bdi dir="ltr" class="odt-ltr-term">ApplicationInitializer</bdi>] هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> rdvmedecins.web.config;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.boot.builder.SpringApplicationBuilder;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.boot.context.web.SpringBootServletInitializer;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ApplicationInitializer </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> SpringBootServletInitializer {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#646464">@Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">protected</span><span style="color:#000000"> SpringApplicationBuilder configure(SpringApplicationBuilder application) {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> application.sources(AppConfig.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
-  <li>السطر 6: فئة [<span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">ApplicationInitializer</bdi></span>] تمتد من فئة [<span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">SpringBootServletInitializer</bdi></span>]؛
+  <li>السطر 6: الفئة [<bdi dir="ltr" class="odt-ltr-term">ApplicationInitializer</bdi>] تمتد من الفئة [<bdi dir="ltr" class="odt-ltr-term">SpringBootServletInitializer</bdi>]؛
   </li>
-  <li>السطر 8: يتم تجاوز طريقة [<bdi dir="ltr" class="odt-ltr-term">configure</bdi>] (السطر 7)؛
+  <li>السطر 8: يتم إعادة تعريف الطريقة [<bdi dir="ltr" class="odt-ltr-term">configure</bdi>] (السطر 7)؛
   </li>
-  <li>السطر 9: يتم توفير فئة [<bdi dir="ltr" class="odt-ltr-term">AppConfig</bdi>] لتكوين المشروع؛
+  <li>السطر 9: يتم توفير الفئة [<bdi dir="ltr" class="odt-ltr-term">AppConfig</bdi>] التي تقوم بتكوين المشروع؛
   </li>
 </ul>
 
-<p>بمجرد الانتهاء من ذلك، قد تحتاج إلى تحديث مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> (اضطررت إلى القيام بذلك): [انقر بزر الماوس الأيمن على المشروع / <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> / تحديث المشروع] أو [<bdi dir="ltr" class="odt-ltr-term">Alt-F5</bdi>].</p>
-<p>لتشغيل المشروع، اتبع الخطوات التالية:</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005750000017652375D89.png" width="680" height="182" style="display:inline-block; margin:4px;width:17.999cm;height:4.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000005750000017652375D89.png" /></td></tr></table>
+<p>بعد ذلك، قد يكون من الضروري تحديث مشروع <bdi dir="ltr" class="odt-ltr-term">Maven</bdi> (اضطررت إلى القيام بذلك): [<bdi dir="ltr" class="odt-ltr-term">clic droit sur projet / Maven / Update project</bdi>] أو [<bdi dir="ltr" class="odt-ltr-term">Alt-F5</bdi>].</p>
+<p>لتشغيل المشروع، يمكن اتباع الخطوات التالية:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005750000017652375D89.png" width="680" height="182" style="display:inline-block; margin:4px;width:17.999cm;height:4.817cm;" class="odt-zoomable" data-zoom-src="images/10000000000005750000017652375D89.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، قم بتشغيل المشروع على أحد الخوادم المسجلة في بيئة تطوير <bdi dir="ltr" class="odt-ltr-term">Eclipse</bdi>؛
+  <li>في [1]، يتم تشغيل المشروع على أحد الخوادم المسجلة في <bdi dir="ltr" class="odt-ltr-term">IDE Eclipse</bdi>؛
   </li>
-  <li>في [2]، حدد [<bdi dir="ltr" class="odt-ltr-term">tc Server Developer</bdi>]، وهو الخيار الافتراضي. هذا هو أحد أشكال <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi>؛
+  <li>في [2]، يتم اختيار [<bdi dir="ltr" class="odt-ltr-term">tc Server Developer</bdi>] الذي يكون موجودًا بشكل افتراضي. وهو نسخة معدلة من <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi>؛
   </li>
 </ul>
 
-<p>ستحصل على النتيجة التالية:</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001F400000138F1D94013.png" width="350" height="218" style="display:inline-block; margin:4px;width:9.26cm;height:5.779cm;" class="odt-zoomable" data-zoom-src="images/10000000000001F400000138F1D94013.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+<p>ونحصل على النتيجة التالية:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001F400000138F1D94013.png" width="350" height="218" style="display:inline-block; margin:4px;width:9.26cm;height:5.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000001F400000138F1D94013.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<p>هذا أمر طبيعي. تذكر أن خدمة الويب لا تحتوي على عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [/] في أساليبها. عند تجربة عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [/<bdi dir="ltr" class="odt-ltr-term">getAllMedecins</bdi>]، ستحصل على الاستجابة التالية:</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002620000015B5448B8AD.png" width="427" height="243" style="display:inline-block; margin:4px;width:11.299cm;height:6.428cm;" class="odt-zoomable" data-zoom-src="images/10000000000002620000015B5448B8AD.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+<p>وهذا أمر طبيعي. تجدر الإشارة إلى أن خدمة الويب لا تحتوي على <bdi dir="ltr" class="odt-ltr-term">URL</bdi> و[/] ضمن أساليبها. وعند تجربة <bdi dir="ltr" class="odt-ltr-term">URL</bdi> و[/<bdi dir="ltr" class="odt-ltr-term">getAllMedecins</bdi>]، نحصل على الرد التالي:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002620000015B5448B8AD.png" width="427" height="243" style="display:inline-block; margin:4px;width:11.299cm;height:6.421cm;" class="odt-zoomable" data-zoom-src="images/10000000000002620000015B5448B8AD.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<p>هذا أمر طبيعي. خدمة الويب محمية.</p>
-<p>الآن دعونا نطلق العميل [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>] في <bdi dir="ltr" class="odt-ltr-term">WebStorm:</bdi></p>
+<p>هذا أمر طبيعي. الخدمة الويب محمية.</p>
+<p>الآن لنقم بتشغيل عميل [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>] في <bdi dir="ltr" class="odt-ltr-term">Webstorm:</bdi></p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000056E000000D7B5440FB6.png" width="680" height="105" style="display:inline-block; margin:4px;width:17.999cm;height:2.783cm;" class="odt-zoomable" data-zoom-src="images/100000000000056E000000D7B5440FB6.png" /></td></tr></table>
 
-<p>في [1]، أدخل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخدمة الويب الجديدة [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4</bdi>]. نحصل على النتيجة التالية:</p>
-<p><img src="images/10000000000004B4000002A9BA88E4D6.png" width="794" height="449" style="width:21.001cm;height:11.878cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004B4000002A9BA88E4D6.png" /></p>
-<p>لتشغيل التطبيق خارج بيئة تطوير <bdi dir="ltr" class="odt-ltr-term">STS</bdi>، هناك حلول متنوعة. وإليك أحدها.</p>
+<p>في [1]، نضع <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الخاص بخدمة الويب الجديدة [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4</bdi>]. ونحصل على النتيجة التالية:</p>
+<p><img src="images/10000000000004B4000002A9BA88E4D6.png" width="794" height="449" style="width:21.001cm;height:11.89cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004B4000002A9BA88E4D6.png" /></p>
+<p>لتشغيل التطبيق خارج نطاق <bdi dir="ltr" class="odt-ltr-term">IDE STS</bdi>، توجد حلول متنوعة. وإليك أحدها.</p>
 <p>قم بتنزيل إصدار من <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://tomcat.apache.org/download-80.cgi</bdi>] (يوليو 2014):</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000500000001FFCB6B987D.png" width="640" height="255" style="display:inline-block; margin:4px;width:16.933cm;height:6.759cm;" class="odt-zoomable" data-zoom-src="images/1000000000000500000001FFCB6B987D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000500000001FFCB6B987D.png" width="640" height="256" style="display:inline-block; margin:4px;width:16.933cm;height:6.761cm;" class="odt-zoomable" data-zoom-src="images/1000000000000500000001FFCB6B987D.png" /></td></tr></table>
 
-<p>اختر نسخة مضغوطة في [1] وقم بفك ضغطها في [2]. ارجع إلى <bdi dir="ltr" class="odt-ltr-term">STS:</bdi></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005A7000001B552C53DAA.png" width="680" height="205" style="display:inline-block; margin:4px;width:17.999cm;height:5.436cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A7000001B552C53DAA.png" /></td></tr></table>
+<p>نختار في [1] نسخة مضغوطة ونقوم بفك ضغطها في [2]. نعود إلى <bdi dir="ltr" class="odt-ltr-term">STS:</bdi></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005A7000001B552C53DAA.png" width="680" height="205" style="display:inline-block; margin:4px;width:17.999cm;height:5.435cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A7000001B552C53DAA.png" /></td></tr></table>
 
 <ul>
-  <li>في علامة التبويب [الخوادم]، انقر بزر الماوس الأيمن على تطبيق [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] واختر خيار [استعراض موقع النشر]؛
+  <li>في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Servers</bdi>]، نضغط بزر الفأرة الأيمن على التطبيق [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] ونختار الخيار [<bdi dir="ltr" class="odt-ltr-term">Browse Deployment Location</bdi>]؛
   </li>
   <li>في [4]: انسخ المجلد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>]؛
   </li>
@@ -702,45 +702,45 @@
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000045E000001F122FC5F51.png" width="559" height="249" style="display:inline-block; margin:4px;width:14.79cm;height:6.576cm;" class="odt-zoomable" data-zoom-src="images/100000000000045E000001F122FC5F51.png" /></td></tr></table>
 
 <ul>
-  <li>في [5]، الصق المجلد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] في مجلد <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> [<bdi dir="ltr" class="odt-ltr-term">webapps</bdi>]؛
+  <li>في [5]، قم بلصق المجلد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] في المجلد [<bdi dir="ltr" class="odt-ltr-term">webapps</bdi>] الخاص بـ <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi>؛
   </li>
-  <li>في [6]، قم بتشغيل ملف الأوامر [<bdi dir="ltr" class="odt-ltr-term">startup.bat</bdi>] (يجب إيقاف خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> المدمج في <bdi dir="ltr" class="odt-ltr-term">STS</bdi>). تفتح نافذة <bdi dir="ltr" class="odt-ltr-term">DOS</bdi> لعرض سجلات <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> يجب أن تظهر هذه السجلات أن تطبيق [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] قد تم تشغيله.
+  <li>في [6]، قم بتشغيل ملف الأوامر [<bdi dir="ltr" class="odt-ltr-term">startup.bat</bdi>] (يجب إيقاف تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> المدمج في <bdi dir="ltr" class="odt-ltr-term">STS</bdi>). تفتح نافذة <bdi dir="ltr" class="odt-ltr-term">DOS</bdi> لعرض سجلات <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> يجب أن تظهر هذه السجلات أن التطبيق [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] قد تم تشغيله.
   </li>
 </ul>
 
-<p>للتحقق من ذلك، قم بتشغيل عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>] مرة أخرى في <bdi dir="ltr" class="odt-ltr-term">WebStorm:</bdi></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000573000000CDB4E412AB.png" width="680" height="100" style="display:inline-block; margin:4px;width:17.999cm;height:2.646cm;" class="odt-zoomable" data-zoom-src="images/1000000000000573000000CDB4E412AB.png" /></td></tr></table>
+<p>للتحقق من ذلك، قم بتشغيل عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>] مرة أخرى في <bdi dir="ltr" class="odt-ltr-term">Webstorm:</bdi></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000573000000CDB4E412AB.png" width="680" height="100" style="display:inline-block; margin:4px;width:17.999cm;height:2.644cm;" class="odt-zoomable" data-zoom-src="images/1000000000000573000000CDB4E412AB.png" /></td></tr></table>
 
-<p>في [1]، أدخل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخدمة الويب الجديدة [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4</bdi>]. سترى النتيجة التالية:</p>
-<p><img src="images/10000000000004B4000002A9BA88E4D6.png" width="794" height="449" style="width:21.001cm;height:11.878cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004B4000002A9BA88E4D6.png" /></p>
-<p><a id="refheading112472271450484"></a></p>
+<p>في [1]، نضع <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الخاص بخدمة الويب الجديدة [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4</bdi>]. ونحصل على النتيجة التالية:</p>
+<p><img src="images/10000000000004B4000002A9BA88E4D6.png" width="794" height="449" style="width:21.001cm;height:11.89cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004B4000002A9BA88E4D6.png" /></p>
+<p><span id="refheading112472271450484" name="refheading112472271450484" class="odt-bookmark-anchor"></span></p>
 <h2 id="42-angular-tomcat">4.2. <span style="color: #4f81bd">نشر عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> على خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi></span></h2>
-<p>الآن بعد أن تم نشر خدمة الويب على <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi>، سنقوم بنشر عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> على الخادم أيضًا. يمكن أن يكون هذا هو الخادم الذي يستضيف خدمة الويب بالفعل. سنتبع هذا النهج.</p>
-<p>أولاً، نقوم بنسخ العميل [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v3</bdi>] ونجري التغييرات التالية:</p>
+<p>الآن بعد أن تم نشر الخدمة الويب على <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi>، سنقوم بنشر عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> على خادم أيضًا. يمكن أن يكون هذا الخادم هو نفسه الذي يستضيف الخدمة الويب بالفعل. وسنتبع هذا المسار.</p>
+<p>أولاً، نقوم بنسخ العميل [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v2</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v3</bdi>] ونجري التعديلات التالية:</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003980000019CF396B9A2.png" width="460" height="206" style="display:inline-block; margin:4px;width:12.171cm;height:5.45cm;" class="odt-zoomable" data-zoom-src="images/10000000000003980000019CF396B9A2.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، تم نقل كل شيء إلى مجلد باسم [ app]؛
+  <li>إلى [1]، وتم نقل كل شيء إلى مجلد [app] ؛
   </li>
-  <li>في [1]، قمنا بإزالة المجلد [<bdi dir="ltr" class="odt-ltr-term">bower-components</bdi>]، الذي كان يحتوي على مكتبات <bdi dir="ltr" class="odt-ltr-term">CSS</bdi> و <bdi dir="ltr" class="odt-ltr-term">JS</bdi> المختلفة المطلوبة للمشروع. تم نسخ جميع هذه العناصر إلى المجلد [lib] [2]؛
+  <li>في [1]، تم حذف المجلد [<bdi dir="ltr" class="odt-ltr-term">bower-components</bdi>] الذي كان يحتوي على المكتبات المختلفة <bdi dir="ltr" class="odt-ltr-term">CSS</bdi> و <bdi dir="ltr" class="odt-ltr-term">JS</bdi> اللازمة للمشروع. تم نسخ جميع هذه العناصر إلى المجلد [lib] [2]؛
   </li>
-  <li>في [1]، تم تغيير اسم ملف [<bdi dir="ltr" class="odt-ltr-term">app.html</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">index.html</bdi>]؛
+  <li>في المجلد [1]، تم تغيير اسم الملف [<bdi dir="ltr" class="odt-ltr-term">app.html</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">index.html</bdi>]؛
   </li>
 </ul>
 
-<p>تم تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">index.html</bdi>] لمراعاة التغييرات في مسارات الموارد المستخدمة:</p>
+<p>تم تعديل الملف [<bdi dir="ltr" class="odt-ltr-term">index.html</bdi>] لمراعاة التغييرات في مسارات الموارد المستخدمة:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span> <span style="color:#7f007f">ng-app</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;rdvmedecins&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span><span style="color:#000000">RdvMedecins</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- on CSS --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- CSS --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">...</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">link</span> <span style="color:#7f007f">href</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lib/bootstrap-theme.min.css&quot;</span> <span style="color:#7f007f">rel</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;stylesheet&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">link</span> <span style="color:#7f007f">href</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lib/bootstrap-select.min.css&quot;</span> <span style="color:#7f007f">rel</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;stylesheet&quot;</span><span style="color:#008080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- controller [appCtrl], model [app] --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- وحدة التحكم [appCtrl]، النموذج [app] --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span> <span style="color:#7f007f">ng-controller</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;appCtrl&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">div</span> <span style="color:#7f007f">class</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;container&quot;</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">...</span></span></span>
@@ -750,232 +750,232 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">script</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/javascript&quot;</span> <span style="color:#7f007f">src</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lib/bootstrap.min.js&quot;</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">script</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">script</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/javascript&quot;</span> <span style="color:#7f007f">src</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lib/bootstrap-select.min.js&quot;</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">script</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">script</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/javascript&quot;</span> <span style="color:#7f007f">src</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lib/footable.js&quot;</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">script</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- angular js --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- AngularJS --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">script</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/javascript&quot;</span> <span style="color:#7f007f">src</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lib/angular.min.js&quot;</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">script</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">script</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/javascript&quot;</span> <span style="color:#7f007f">src</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lib/ui-bootstrap-tpls.min.js&quot;</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">script</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">script</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/javascript&quot;</span> <span style="color:#7f007f">src</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lib/angular-route.min.js&quot;</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">script</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">script</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/javascript&quot;</span> <span style="color:#7f007f">src</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lib/angular-translate.min.js&quot;</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">script</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">script</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/javascript&quot;</span> <span style="color:#7f007f">src</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;lib/angular-base64.min.js&quot;</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">script</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- modules --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- الوحدات النمطية --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- services --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- الخدمات --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- guidelines --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- التوجيهات --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- controllers --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- وحدات التحكم --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">....</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>بالإضافة إلى ذلك، تم تعديل وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">loginCtrl</bdi>] لتشير إلى الخادم الصحيح حتى لا يضطر المستخدم إلى كتابة عنوان <bdi dir="ltr" class="odt-ltr-term">URL:</bdi></p>
+<p>بالإضافة إلى ذلك، تم تعديل وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">loginCtrl</bdi>] لتشير إلى الخادم الصحيح لتجنب اضطرار المستخدم إلى كتابة <bdi dir="ltr" class="odt-ltr-term">URL:</bdi></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">// credentials</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// بيانات الاعتماد</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">app.serverUrl = </span><span style="color:#2a00ff">&quot;http://localhost:8080/rdvmedecins-webapi-v4&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">app.username = </span><span style="color:#2a00ff">&quot;admin&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">app.password = </span><span style="color:#2a00ff">&quot;admin&quot;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>الآن بعد الانتهاء من ذلك، دعونا نقوم بتشغيل ملف [<bdi dir="ltr" class="odt-ltr-term">index.html</bdi>]:</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F900000184DBAA64E0.png" width="174" height="272" style="display:inline-block; margin:4px;width:4.611cm;height:7.184cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F900000184DBAA64E0.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000DE0000006C4B136E18.png" width="155" height="76" style="display:inline-block; margin:4px;width:4.11cm;height:1.998cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE0000006C4B136E18.png" /></td></tr></table>
+<p>وبعد ذلك، نقوم بتشغيل الملف [<bdi dir="ltr" class="odt-ltr-term">index.html</bdi>]:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F900000184DBAA64E0.png" width="174" height="271" style="display:inline-block; margin:4px;width:4.611cm;height:7.181cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F900000184DBAA64E0.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000DE0000006C4B136E18.png" width="155" height="76" style="display:inline-block; margin:4px;width:4.11cm;height:2cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE0000006C4B136E18.png" /></td></tr></table>
 
-<p>ثم دعونا نسجل الدخول إلى خدمة الويب. من المفترض أن تعمل. بمجرد التحقق من ذلك، دعونا نوقف خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> سنعيد استخدام خادم <bdi dir="ltr" class="odt-ltr-term">STS</bdi> المدمج.</p>
-<p>في <bdi dir="ltr" class="odt-ltr-term">STS</bdi>، انسخ محتويات مجلد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v3/app</bdi>] بالكامل إلى مجلد [<bdi dir="ltr" class="odt-ltr-term">webapp</bdi>] في مشروع [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] (علامة التبويب <em><bdi dir="ltr" class="odt-ltr-term">Navigator</bdi></em>) [1]:</p>
+<p>ثم دعونا نقوم بتسجيل الدخول إلى خدمة الويب. من المفترض أن يعمل ذلك. بعد التحقق من ذلك، دعونا نوقف خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> سنقوم بإعادة استخدام الخادم المدمج في <bdi dir="ltr" class="odt-ltr-term">STS.</bdi></p>
+<p>في <bdi dir="ltr" class="odt-ltr-term">STS</bdi>، ننسخ كل محتويات المجلد [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-angular-v3/app</bdi>] إلى المجلد [<bdi dir="ltr" class="odt-ltr-term">webapp</bdi>] التابع للمشروع [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-webapi-v4</bdi>] (علامة التبويب <em><bdi dir="ltr" class="odt-ltr-term">Navigator</bdi></em>) [1]:</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000038F000002644A182322.png" width="456" height="306" style="display:inline-block; margin:4px;width:12.053cm;height:8.096cm;" class="odt-zoomable" data-zoom-src="images/100000000000038F000002644A182322.png" /></td></tr></table>
 
-<p>بمجرد الانتهاء من ذلك، قم بتشغيل [2] خادم <bdi dir="ltr" class="odt-ltr-term">STS VMware</bdi>، ثم اطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4/app/index.html</bdi>]:</p>
+<p>بعد ذلك، نقوم بتشغيل [2]، وخادم <bdi dir="ltr" class="odt-ltr-term">VMware</bdi> التابع لـ <bdi dir="ltr" class="odt-ltr-term">STS</bdi>، ثم نطلب <bdi dir="ltr" class="odt-ltr-term">URL</bdi> و [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4/app/index.html</bdi>]:</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000034D000002C10CB0CB6F.png" width="423" height="353" style="display:inline-block; margin:4px;width:11.18cm;height:9.327cm;" class="odt-zoomable" data-zoom-src="images/100000000000034D000002C10CB0CB6F.png" /></td></tr></table>
 
-<p>نواجه مشكلة في الأذونات عند [3]. وهذا ليس مفاجئًا نظرًا لأننا قمنا بتأمين خدمة الويب. نحتاج إلى تحديد أن الوصول إلى الملف [/<bdi dir="ltr" class="odt-ltr-term">app/index.html</bdi>] غير مقيد. لنعد إلى <bdi dir="ltr" class="odt-ltr-term">Eclipse:</bdi></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F4000000CD22F5BACE.png" width="171" height="144" style="display:inline-block; margin:4px;width:4.521cm;height:3.798cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F4000000CD22F5BACE.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+<p>توجد مشكلة في حقوق الوصول في [3]. وهذا ليس مفاجئًا لأننا قمنا بحماية خدمة الويب. يجب أن نحدد أن الوصول إلى الملف [/<bdi dir="ltr" class="odt-ltr-term">app/index.html</bdi>] مفتوح. لنعد إلى <bdi dir="ltr" class="odt-ltr-term">Eclipse:</bdi></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000F4000000CD22F5BACE.png" width="171" height="144" style="display:inline-block; margin:4px;width:4.521cm;height:3.799cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F4000000CD22F5BACE.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<p>تذكر أن أذونات الوصول تم تعريفها في فئة [<bdi dir="ltr" class="odt-ltr-term">SecurityConfig</bdi>]. دعونا نعدلها على النحو التالي:</p>
+<p>نتذكر أن حقوق الوصول قد تم تحديدها في الفئة [<bdi dir="ltr" class="odt-ltr-term">SecurityConfig</bdi>]. لنقوم بتعديلها على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#646464">@Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">protected</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> configure(HttpSecurity http) </span><span style="font-weight:bold;color:#7f0055">throws</span><span style="color:#000000"> Exception {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// CSRF</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        http.csrf().disable();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// the password is transmitted by the header Authorization: Basic xxxx</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// يتم إرسال كلمة المرور عبر رأس الرسالة Authorization: Basic xxxx</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        http.httpBasic();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// the HTTP OPTIONS method must be authorized for all</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// يجب السماح باستخدام الطريقة HTTP OPTIONS للجميع</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        http.authorizeRequests() </span><span style="color:#3f7f5f">//</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                .antMatchers(HttpMethod.</span><span style="font-style:italic;color:#0000c0">OPTIONS</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;/&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;/**&quot;</span><span style="color:#000000">).permitAll();</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// the [app] folder is accessible to all</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// المجلد [app] متاح للجميع</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        http.authorizeRequests() </span><span style="color:#3f7f5f">//</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                .antMatchers(HttpMethod.</span><span style="font-style:italic;color:#0000c0">GET</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;/app&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;/app/**&quot;</span><span style="color:#000000">).permitAll();</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// only the ADMIN role can use the application</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// لا يمكن استخدام التطبيق إلا من قبل الدور ADMIN</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        http.authorizeRequests() </span><span style="color:#3f7f5f">//</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">                .antMatchers(&quot;/&quot;, &quot;/**&quot;) // all URL</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">                .antMatchers(&quot;/&quot;, &quot;/**&quot;) // جميع URL</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                .hasRole(</span><span style="color:#2a00ff">&quot;ADMIN&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <ul>
-  <li>السطران 11–12: نمنح الجميع إذنًا لقراءة المجلد [app] ومحتوياته. للقيام بذلك، نتبع المثال الموضح في الأسطر السابقة.
+  <li>السطران 11-12: نسمح للجميع بقراءة المجلد [app] ومحتوياته. ونستلهم في ذلك من الأسطر السابقة.
   </li>
 </ul>
 
-<p>الآن، أعد تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">STS Tomcat</bdi> واطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4/app/index.html</bdi>] مرة أخرى:</p>
-<p><img src="images/100000000000060700000238D88F7EC9.png" width="670" height="247" style="width:17.729cm;height:6.526cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000060700000238D88F7EC9.png" /></p>
-<p>هذه المرة، يعمل الأمر.</p>
-<p><a id="refheading112474271450484"></a></p>
+<p>الآن، لنُعيد تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> الخاص بـ <bdi dir="ltr" class="odt-ltr-term">STS</bdi> ثم نطلب مرة أخرى <bdi dir="ltr" class="odt-ltr-term">URL</bdi> و [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4/app/index.html</bdi>]:</p>
+<p><img src="images/100000000000060700000238D88F7EC9.png" width="670" height="247" style="width:17.729cm;height:6.525cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000060700000238D88F7EC9.png" /></p>
+<p>هذه المرة، نجح الأمر.</p>
+<p><span id="refheading112474271450484" name="refheading112474271450484" class="odt-bookmark-anchor"></span></p>
 <h2 id="43-cors">4.3. <span style="color: #4f81bd">رؤوس <bdi dir="ltr" class="odt-ltr-term">CORS</bdi></span></h2>
-<p>قد تتذكر أننا واجهنا صعوبة كبيرة في التعامل مع رؤوس <bdi dir="ltr" class="odt-ltr-term">CORS.</bdi> في المثال السابق:</p>
+<p>ربما نتذكر أننا كافحنا بشدة للتعامل مع الرؤوس <bdi dir="ltr" class="odt-ltr-term">CORS.</bdi> في المثال السابق:</p>
 <ul>
-  <li>تقع خدمة الويب على عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4</bdi>]؛
+  <li>تقع خدمة الويب في <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4</bdi>]؛
   </li>
-  <li>يوجد عميل <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> على عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4/app</bdi>]؛
+  <li>العميل <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> موجود على <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4/app</bdi>]؛
   </li>
 </ul>
 
-<p>وبالتالي، فإن عميل <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> وخدمة الويب موجودان على نفس الخادم [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080</bdi>]. لا توجد تعارضات <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> لأن هذه التعارضات تحدث فقط عندما لا يكون العميل والخادم في نفس المجال. يجب أن نتمكن من التحقق من ذلك. دعونا نعود إلى <bdi dir="ltr" class="odt-ltr-term">STS:</bdi></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000EA000000C709556DD7.png" width="164" height="139" style="display:inline-block; margin:4px;width:4.33cm;height:3.681cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EA000000C709556DD7.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+<p>وبالتالي، فإن العميل <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> وخدمة الويب موجودان على نفس الخادم [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080</bdi>]. ولا توجد أي تعارضات <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> لأن هذه التعارضات لا تحدث إلا عندما لا يكون العميل والخادم في نفس المجال. وينبغي أن نتمكن من التحقق من ذلك. نعود إلى <bdi dir="ltr" class="odt-ltr-term">STS:</bdi></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000EA000000C709556DD7.png" width="164" height="139" style="display:inline-block; margin:4px;width:4.33cm;height:3.679cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EA000000C709556DD7.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<p>يتم التحكم في إنشاء رؤوس <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> من خلال متغير منطقي محدد في فئة [<bdi dir="ltr" class="odt-ltr-term">ApplicationModel</bdi>]:</p>
+<p>يتم التحكم في إنشاء رؤوس <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> أو عدم إنشائها بواسطة متغير منطقي محدد في الفئة [<bdi dir="ltr" class="odt-ltr-term">ApplicationModel</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// données de configuration</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// بيانات التكوين</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">boolean</span><span style="color:#000000"> </span><span style="color:#0000c0">CORSneeded</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">true</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>نقوم بتعيين القيمة المنطقية أعلاه إلى <strong><bdi dir="ltr" class="odt-ltr-term">false</bdi></strong>، ونعيد تشغيل خدمة الويب، ونطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4/app/index.html</bdi>] مرة أخرى. يمكننا أن نرى أن التطبيق يعمل.</p>
-<p><a id="refheading112476271450484"></a></p>
+<p>نقوم بتعيين القيمة المنطقية المذكورة أعلاه إلى <strong>«<bdi dir="ltr" class="odt-ltr-term">false</bdi></strong>»، ثم نعيد تشغيل خدمة الويب ونطلب مرة أخرى <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost:8080/rdvmedecins-webapi-v4/app/index.html</bdi>]. ونلاحظ أن التطبيق يعمل.</p>
+<p><span id="refheading112476271450484" name="refheading112476271450484" class="odt-bookmark-anchor"></span></p>
 <h2 id="44-angular-android">4.4. <span style="color: #4f81bd">نشر عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> على جهاز لوحي يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Android</bdi></span></h2>
-<p>تتيح لك أداة [<bdi dir="ltr" class="odt-ltr-term">Phonegap</bdi>] [<bdi dir="ltr" class="odt-ltr-term">http://phonegap.com/</bdi>] إنشاء ملف قابل للتنفيذ على الأجهزة المحمولة (<bdi dir="ltr" class="odt-ltr-term">Android</bdi>، <bdi dir="ltr" class="odt-ltr-term">iOS</bdi>، <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> 8، إلخ) من تطبيق <bdi dir="ltr" class="odt-ltr-term">HTML/JS/CSS.</bdi> هناك طرق مختلفة لتحقيق ذلك. سنستخدم أبسطها: أداة عبر الإنترنت متوفرة على موقع <bdi dir="ltr" class="odt-ltr-term">Phonegap</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://build.phonegap.com/apps</bdi>].</p>
+<p>تتيح الأداة [<bdi dir="ltr" class="odt-ltr-term">Phonegap</bdi>] [<bdi dir="ltr" class="odt-ltr-term">http://phonegap.com/</bdi>] إنشاء ملف قابل للتنفيذ للأجهزة المحمولة (<bdi dir="ltr" class="odt-ltr-term">Android</bdi>، <bdi dir="ltr" class="odt-ltr-term">IoS</bdi>، <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> 8، ...) من تطبيق <bdi dir="ltr" class="odt-ltr-term">HTML / JS / CSS.</bdi> هناك طرق مختلفة لتحقيق هذا الهدف. نحن نستخدم أبسطها: أداة متوفرة عبر الإنترنت على موقع <bdi dir="ltr" class="odt-ltr-term">Phonegap</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://build.phonegap.com/apps</bdi>].</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000508000001E0E493FB62.png" width="644" height="240" style="display:inline-block; margin:4px;width:17.039cm;height:6.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000508000001E0E493FB62.png" /></td></tr></table>
 
 <ul>
-  <li>قبل [1]، قد تحتاج إلى إنشاء حساب؛
+  <li>قبل [1]، قد تضطر إلى إنشاء حساب؛
   </li>
-  <li>في [1]، ابدأ؛
+  <li>في [1]، نبدأ؛
   </li>
-  <li>في [2]، اختر خطة مجانية تسمح بتطبيق <bdi dir="ltr" class="odt-ltr-term">Phonegap</bdi> واحد فقط؛
+  <li>في [2]، نختار خطة مجانية تسمح بتطبيق <bdi dir="ltr" class="odt-ltr-term">Phonegap</bdi> واحد فقط؛
   </li>
 </ul>
 
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000053700000104D2C8C565.png" width="668" height="130" style="display:inline-block; margin:4px;width:17.662cm;height:3.44cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000104D2C8C565.png" /></td></tr></table>
 
 <ul>
-  <li>في [3]، قم بتنزيل التطبيق المضغوط [4] (المجلد [app] الذي تم إنشاؤه في القسم<a href="#creation-app"><u><span style="color: #0563c1"> 4.2</span></u></a> مضغوط)؛
+  <li>في [3]، قم بتنزيل التطبيق المضغوط [4] (المجلد [app] الذي تم إنشاؤه في الفقرة<a href="#creation-app"><u><span style="color: #0563c1"> 4.2</span></u></a> مضغوط)؛
   </li>
 </ul>
 
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000058E000001A8102589EA.png" width="680" height="203" style="display:inline-block; margin:4px;width:17.999cm;height:5.368cm;" class="odt-zoomable" data-zoom-src="images/100000000000058E000001A8102589EA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000058E000001A8102589EA.png" width="680" height="203" style="display:inline-block; margin:4px;width:17.999cm;height:5.366cm;" class="odt-zoomable" data-zoom-src="images/100000000000058E000001A8102589EA.png" /></td></tr></table>
 
 <ul>
   <li>في [5]، قم بتسمية التطبيق؛
   </li>
-  <li>في [6]، قم بإنشائه. قد يستغرق ذلك دقيقة واحدة. انتظر حتى تشير أيقونات المنصات المحمولة المختلفة إلى اكتمال الإنشاء؛
+  <li>في [6]، يتم إنشاء التطبيق. قد تستغرق هذه العملية دقيقة واحدة. يرجى الانتظار حتى تشير أيقونات المنصات المحمولة المختلفة إلى اكتمال عملية الإنشاء؛
   </li>
 </ul>
 
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000036D000001AB246FEA43.png" width="439" height="214" style="display:inline-block; margin:4px;width:11.603cm;height:5.65cm;" class="odt-zoomable" data-zoom-src="images/100000000000036D000001AB246FEA43.png" /></td></tr></table>
 
 <ul>
-  <li>تم إنشاء ملفات <bdi dir="ltr" class="odt-ltr-term">Android</bdi> [7] و <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> [8] الثنائية فقط؛
+  <li>تم إنشاء ملفات <bdi dir="ltr" class="odt-ltr-term">Android</bdi> الثنائية [7] وملفات <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> الثنائية [8] فقط؛
   </li>
   <li>انقر على [7] لتنزيل الملف الثنائي لنظام <bdi dir="ltr" class="odt-ltr-term">Android</bdi>؛
   </li>
 </ul>
 
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000016D000000C8628D9981.png" width="183" height="100" style="display:inline-block; margin:4px;width:4.83cm;height:2.648cm;" class="odt-zoomable" data-zoom-src="images/100000000000016D000000C8628D9981.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000016D000000C8628D9981.png" width="183" height="100" style="display:inline-block; margin:4px;width:4.83cm;height:2.646cm;" class="odt-zoomable" data-zoom-src="images/100000000000016D000000C8628D9981.png" /></td></tr></table>
 
 <ul>
-  <li>في [9]، الملف الثنائي [apk] الذي تم تنزيله؛
+  <li>في [9]، تم تنزيل الملف الثنائي [apk]؛
   </li>
 </ul>
 
-<p>قم بتشغيل محاكي [<bdi dir="ltr" class="odt-ltr-term">GenyMotion</bdi>] لجهاز لوحي يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Android</bdi> (انظر القسم<a href="#refheading454551405398942"><u><span style="color: #0563c1"> 6.4</span></u></a>):</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000017900000131A1D5D594.png" width="264" height="213" style="display:inline-block; margin:4px;width:6.98cm;height:5.646cm;" class="odt-zoomable" data-zoom-src="images/100000000000017900000131A1D5D594.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+<p>قم بتشغيل محاكي [<bdi dir="ltr" class="odt-ltr-term">GenyMotion</bdi>] لجهاز لوحي يعمل بنظام أندرويد (انظر الفقرة<a href="lmrfqt.html#refheading454551405398942"><u><span style="color: #0563c1"> 6.4</span></u></a>):</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000017900000131A1D5D594.png" width="264" height="214" style="display:inline-block; margin:4px;width:6.98cm;height:5.65cm;" class="odt-zoomable" data-zoom-src="images/100000000000017900000131A1D5D594.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<p>أعلاه، نقوم بتشغيل محاكي جهاز لوحي مع <bdi dir="ltr" class="odt-ltr-term">Android API</bdi> 16. بمجرد تشغيل المحاكي، </p>
+<p>في الصورة أعلاه، يتم تشغيل محاكي جهاز لوحي بنظام أندرويد الإصدار 16 (<bdi dir="ltr" class="odt-ltr-term">API</bdi>). بمجرد تشغيل المحاكي، </p>
 <ul>
   <li>قم بإلغاء قفله عن طريق سحب القفل (إن وجد) إلى الجانب ثم تركه؛
   </li>
-  <li>باستخدام الماوس، اسحب ملف [<bdi dir="ltr" class="odt-ltr-term">PGBuildApp-debug.apk</bdi>] الذي قمت بتنزيله وأسقطه على المحاكي. سيتم بعد ذلك تثبيته وتشغيله؛
+  <li>باستخدام الماوس، اسحب الملف [<bdi dir="ltr" class="odt-ltr-term">PGBuildApp-debug.apk</bdi>] الذي قمت بتنزيله وأسقطه على المحاكي. سيتم تثبيته وتشغيله بعد ذلك؛
   </li>
 </ul>
 
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005CB00000287923DA7F0.png" width="680" height="297" style="display:inline-block; margin:4px;width:17.999cm;height:7.853cm;" class="odt-zoomable" data-zoom-src="images/10000000000005CB00000287923DA7F0.png" /></td></tr></table>
 
-<p>تحتاج إلى تغيير عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> إلى [1]. للقيام بذلك، في نافذة موجه الأوامر، اكتب الأمر [<bdi dir="ltr" class="odt-ltr-term">ipconfig</bdi>] (السطر 1 أدناه)، والذي سيعرض عناوين <bdi dir="ltr" class="odt-ltr-term">IP</bdi> المختلفة لجهازك:</p>
+<p>يجب تغيير <bdi dir="ltr" class="odt-ltr-term">URL</bdi> إلى [1]. للقيام بذلك، في نافذة الأوامر، اكتب الأمر [<bdi dir="ltr" class="odt-ltr-term">ipconfig</bdi>] (السطر 1 أدناه) الذي سيعرض العناوين المختلفة لـ <bdi dir="ltr" class="odt-ltr-term">IP</bdi> على جهازك:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">C:\Users\Serge Tahé&gt;<span style="color:#ff3333">ipconfig</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Configuration IP de Windows</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Carte réseau sans fil Connexion au réseau local* 15 :</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   Statut du média. . . . . . . . . . . . : Média déconnecté</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   Suffixe DNS propre à la connexion. . . :</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Carte Ethernet Connexion au réseau local :</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   Suffixe DNS propre à la connexion. . . : ad.univ-angers.fr</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   Adresse IPv6 de liaison locale. . . . .: fe80::698b:455a:925:6b13%4</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   Adresse IPv4. . . . . . . . . . . . . .: <span style="color:#ff3333">172.19.81.34</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   Masque de sous-réseau. . . . . . . . . : 255.255.0.0</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   Passerelle par défaut. . . . . . . . . : 172.19.0.254</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Carte réseau sans fil Wi-Fi :</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   Statut du média. . . . . . . . . . . . : Média déconnecté</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   Suffixe DNS propre à la connexion. . . :</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 </code></pre></div>
 
-<p>قم بتدوين عنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> لشبكة <bdi dir="ltr" class="odt-ltr-term">Wi-Fi</bdi> (الأسطر 6–9) أو عنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> للشبكة المحلية (الأسطر 11–17). ثم استخدم عنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> هذا في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخادم الويب:</p>
+<p>قم بتدوين إما عنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> الخاص بشبكة الواي فاي (الأسطر 6-9)، أو عنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> على الشبكة المحلية (الأسطر 11-17). ثم استخدم هذا العنوان <bdi dir="ltr" class="odt-ltr-term">IP</bdi> في <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لخادم الويب:</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000296000000A328455688.png" width="463" height="114" style="display:inline-block; margin:4px;width:12.261cm;height:3.02cm;" class="odt-zoomable" data-zoom-src="images/1000000000000296000000A328455688.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<p>بمجرد الانتهاء من ذلك، قم بالاتصال بخدمة الويب:</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005F30000039471040E7F.png" width="794" height="477" style="display:inline-block; margin:4px;width:21.001cm;height:12.631cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F30000039471040E7F.png" /></td></tr></table>
+<p>بعد ذلك، قم بالاتصال بخدمة الويب:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005F30000039471040E7F.png" width="794" height="476" style="display:inline-block; margin:4px;width:21.001cm;height:12.599cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F30000039471040E7F.png" /></td></tr></table>
 
-<p>اختبر التطبيق على المحاكي. من المفترض أن يعمل. على جانب الخادم، يمكنك السماح أو عدم السماح برؤوس <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> في فئة [<bdi dir="ltr" class="odt-ltr-term">ApplicationModel</bdi>]: </p>
+<p>اختبر التطبيق على المحاكي. يجب أن يعمل. على جانب الخادم، يمكن السماح أو عدم السماح برؤوس <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> في الفئة [<bdi dir="ltr" class="odt-ltr-term">ApplicationModel</bdi>]: </p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// données de configuration</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// بيانات التكوين</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">boolean</span><span style="color:#000000"> </span><span style="color:#0000c0">CORSneeded</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
-<p>هذا الأمر غير ذي صلة بتطبيق <bdi dir="ltr" class="odt-ltr-term">Android.</bdi> فهو لا يعمل في متصفح. متطلبات رأس <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> تأتي من المتصفح، وليس من الخادم.</p>
-<p><a id="refheading112968271450484"></a></p>
-<h2 id="45-angular-android">4.5. <span style="color: #4f81bd">نشر عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> على محاكي هاتف ذكي يعمل بنظام <bdi dir="ltr" class="odt-ltr-term">Android</bdi></span></h2>
-<p>نكرر الخطوة السابقة باستخدام محاكي هاتف ذكي. نريد التحقق من كيفية عمل عميلنا على الشاشات الصغيرة:</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000057E0000023E9AA273B1.png" width="680" height="278" style="display:inline-block; margin:4px;width:17.999cm;height:7.348cm;" class="odt-zoomable" data-zoom-src="images/100000000000057E0000023E9AA273B1.png" /></td></tr></table>
+<p>لا يهم ذلك بالنسبة لتطبيق <bdi dir="ltr" class="odt-ltr-term">Android.</bdi> فهذا التطبيق لا يعمل في متصفح. أما متطلبات الرؤوس <bdi dir="ltr" class="odt-ltr-term">CORS</bdi> فتأتي من المتصفح وليس من الخادم.</p>
+<p><span id="refheading112968271450484" name="refheading112968271450484" class="odt-bookmark-anchor"></span></p>
+<h2 id="45-angular">4.5. <span style="color: #4f81bd">نشر عميل <bdi dir="ltr" class="odt-ltr-term">Angular</bdi> على محاكي هاتف ذكي يعمل بنظام أندرويد</span></h2>
+<p>نكرر العملية السابقة باستخدام محاكي لهاتف ذكي. نريد التحقق من أداء عميلنا على الشاشات الصغيرة:</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000057E0000023E9AA273B1.png" width="680" height="278" style="display:inline-block; margin:4px;width:17.999cm;height:7.347cm;" class="odt-zoomable" data-zoom-src="images/100000000000057E0000023E9AA273B1.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، نقوم بتشغيل محاكي الهاتف الذكي؛
+  <li>في [1]، نقوم بتشغيل محاكي هاتف ذكي؛
   </li>
-  <li>في [2] و[3]، تم طي شريط التنقل ليصبح قائمة؛
+  <li>في [2] و [3]، تم طي شريط التنقل في قائمة؛
   </li>
 </ul>
 
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000545000002E3F9851CE8.png" width="675" height="370" style="display:inline-block; margin:4px;width:17.847cm;height:9.777cm;" class="odt-zoomable" data-zoom-src="images/1000000000000545000002E3F9851CE8.png" /></td></tr></table>
 
 <ul>
-  <li>في [4]، نقوم بتسجيل الدخول؛
+  <li>في [4]، يتم تسجيل الدخول؛
   </li>
-  <li>في [5]، يتم عرض القائمة والتقويم أحدهما أسفل الآخر بدلاً من عرضهما جنباً إلى جنب؛
+  <li>في [5]، تظهر القائمة والتقويم أحدهما أسفل الآخر بدلاً من أن يكونا جنبًا إلى جنب؛
   </li>
 </ul>
 
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000053400000203A1D37D3B.png" width="666" height="257" style="display:inline-block; margin:4px;width:17.621cm;height:6.812cm;" class="odt-zoomable" data-zoom-src="images/100000000000053400000203A1D37D3B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000053400000203A1D37D3B.png" width="666" height="258" style="display:inline-block; margin:4px;width:17.621cm;height:6.814cm;" class="odt-zoomable" data-zoom-src="images/100000000000053400000203A1D37D3B.png" /></td></tr></table>
 
 <ul>
-  <li>في [6]، نطلب التقويم؛
+  <li>في [6]، يتم طلب جدول المواعيد؛
   </li>
-  <li>في [7]، نظرًا لصغر حجم الشاشة، يتم إخفاء جزء من الفترات الزمنية. وقد تعاملت مكتبة [<bdi dir="ltr" class="odt-ltr-term">footable</bdi>] مع هذا الأمر؛
+  <li>في [7]، نظرًا لصغر حجم الشاشة، فإن جزءًا من الفترات الزمنية مخفي. المكتبة [<bdi dir="ltr" class="odt-ltr-term">footable</bdi>] هي التي قامت بهذه المهمة؛
   </li>
 </ul>
 
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002C3000001E6B549C8DC.png" width="354" height="243" style="display:inline-block; margin:4px;width:9.354cm;height:6.429cm;" class="odt-zoomable" data-zoom-src="images/10000000000002C3000001E6B549C8DC.png" /></td></tr></table>
 
 <ul>
-  <li>في [8]، نفس العرض كما في السابق، ولكن هذه المرة مع موعد.
+  <li>في [8]، نفس العرض السابق مع وجود موعد هذه المرة.
   </li>
 </ul>
 
-<p>بشكل عام، تتكيف تطبيقنا بشكل جيد مع الهاتف الذكي. يمكن بالتأكيد تحسينه، لكنه يظل قابلاً للاستخدام.</p>
+<p>في النهاية، يتكيف تطبيقنا بشكل جيد نسبيًا مع الهاتف الذكي. يمكن بالتأكيد تحسينه، لكنه يظل قابلاً للاستخدام.</p>
 
 
 
